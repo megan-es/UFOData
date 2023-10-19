@@ -5,7 +5,7 @@ In this project, a dataset containing records of UFO sightings was acquired from
 
 Steps:
 Dataset Acquisition:
-Downloaded the UFO sightings dataset from Kaggle.
+Downloaded the UFO sightings dataset from Kaggle. (https://www.kaggle.com/code/hakeemtfrank/ufo-sightings-data-exploration)
 Extracted the dataset and read it into a Pandas DataFrame.
 
 Identified missing values in the 'country' column.
