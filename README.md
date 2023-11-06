@@ -1,40 +1,40 @@
-UFO Sightings Data Cleaning & AWS Integration 
+# UFO Sightings Data Cleaning & AWS Integration
 
-Overview:
-In this project, a dataset containing records of UFO sightings was acquired from Kaggle. A significant issue encountered was the omission of country values, making analysis of UFO sightings' locations challenging. However, the available state, province, latitude, and longitude data provided an opportunity to deduce or retrieve the missing country information. Through the utilization of Python dictionaries, AWS Location Services, and data manipulation techniques, we successfully enhanced the dataset.
+## Overview
+In this project, I task of cleaning a dataset laden with incomplete records of UFO sightings sourced from Kaggle. The primary challenge was the absence of 'country' information in many records, which is vital for geographical analysis of sightings. Fortunately, the dataset was not completely devoid of locational data – it contained 'state', 'province', 'latitude', and 'longitude' details. Leveraging Python, AWS Location Services, and several data manipulation strategies, I enriched the dataset with the missing 'country' data.
 
-Steps:
-Dataset Acquisition:
-Downloaded the UFO sightings dataset from Kaggle. (https://www.kaggle.com/code/hakeemtfrank/ufo-sightings-data-exploration)
-Extracted the dataset and read it into a Pandas DataFrame.
+## Steps Undertaken
 
-Identified missing values in the 'country' column.
-Observed that many records had the 'state' and 'province' columns filled in.
-Latitude and longitude values were often present even when the country was missing.
+### Dataset Acquisition:
+- **Download**: The UFO sightings dataset was obtained from [Kaggle](https://www.kaggle.com/code/hakeemtfrank/ufo-sightings-data-exploration).
+- **Preparation**: Post-download, the dataset was extracted and read into a Pandas DataFrame.
+- **Inspection**: The 'country' column was identified to have missing values. Interestingly, most records had 'state', 'province', and geographical coordinates intact.
 
-Data Augmentation with Python Dictionary:
-Created a dictionary to map state and province values to their respective countries.
-Used the dictionary to fill in missing countries based on available state or province data.
-Additionally, two more dictionaries were utilized to standardize the country naming format in the dataset, converting a mix of 2 and 3-letter country codes to full country names.
+### Data Augmentation with Python Dictionary:
+- **Mapping**: I constructed a Python dictionary to associate 'state' and 'province' with corresponding countries.
+- **Fill-in**: This mapping facilitated the population of missing 'country' data using the 'state' or 'province' values.
+- **Standardization**: Additionally, two supplementary dictionaries were implemented to normalize country identifiers, converting mixed 2 and 3-letter country codes to uniform full country names.
 
-Leveraging AWS Location Services:
-Initialized AWS Location Services and created a place index.
-Used the place index to retrieve countries based on latitude and longitude for rows with missing country values.
-Data Export:
-Finalized the dataset by cleaning up any additional missing or inconsistent values.
-Exported the augmented dataset to a new CSV file for further analysis.
+### Leveraging AWS Location Services:
+- **Setup**: AWS Location Services was initialized, including the creation of a place index.
+- **Geolocation**: The place index was utilized to deduce countries for records lacking this information, based on their latitude and longitude.
+  
+### Data Export:
+- **Cleanup**: I refined the dataset by addressing additional missing or inconsistent values.
+- **Output**: The improved dataset was then exported to a new CSV file, primed for deeper analysis.
 
-Security Considerations:
-Hiding API Key:
-For security reasons, especially to avoid exposing sensitive API credentials, the .env file containing API keys was added to the .gitignore file. This ensures that the API keys are not accidentally pushed to public repositories.
+## Security Considerations
+- **API Key Confidentiality**: To safeguard sensitive API credentials, the .env file with the API keys was diligently included in the .gitignore file. This precaution prevents the accidental exposure of API keys in public repositories.
 
-Required Libraries:
-pandas
-boto3
-kaggle
-python-dotenv
-zipfile
+## Required Libraries
+To replicate the project or conduct further enhancements, the following libraries are necessary:
+```plaintext
+- pandas
+- boto3
+- kaggle
+- python-dotenv
+- zipfile
+```
 
-Future Improvements:
-While AWS Location Services was used in this project, there's potential to integrate other geolocation services like the geopy package.
-Further data exploration can be done to understand UFO sighting patterns based on the cleaned dataset.
+## Future Improvements
+While this project successfully employed AWS Location Services for geolocation purposes, future iterations could explore alternative services like the `geopy` package for diversified data triangulation. Moreover, the sanitized dataset opens up new avenues for more intricate pattern analysis concerning UFO sightings.
