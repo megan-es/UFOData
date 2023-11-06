@@ -1,7 +1,7 @@
 # UFO Sightings Data Cleaning & AWS Integration
 
 ## Overview
-In this project, I task of cleaning a dataset laden with incomplete records of UFO sightings sourced from Kaggle. The primary challenge was the absence of 'country' information in many records, which is vital for geographical analysis of sightings. Fortunately, the dataset was not completely devoid of locational data – it contained 'state', 'province', 'latitude', and 'longitude' details. Leveraging Python, AWS Location Services, and several data manipulation strategies, I enriched the dataset with the missing 'country' data.
+In this project, I set out to clean a dataset laden with incomplete records of UFO sightings sourced from Kaggle. The primary challenge was the absence of 'country' information in many records, which is vital for geographical analysis of sightings. Fortunately, the dataset was not completely devoid of locational data – it contained 'state', 'province', 'latitude', and 'longitude' details. Leveraging Python, AWS Location Services, and several data manipulation strategies, I enriched the dataset with the missing 'country' data.
 
 ## Steps Undertaken
 
