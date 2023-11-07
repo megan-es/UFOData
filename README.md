@@ -6,7 +6,7 @@ In this project, I set out to clean a dataset laden with incomplete records of U
 ## Steps Undertaken
 
 ### Dataset Acquisition:
-- **Download**: The UFO sightings dataset was obtained from [Kaggle](https://www.kaggle.com/code/hakeemtfrank/ufo-sightings-data-exploration).
+- **Download**: The UFO sightings dataset was obtained from [Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings).
 - **Preparation**: Post-download, the dataset was extracted and read into a Pandas DataFrame.
 - **Inspection**: The 'country' column was identified to have missing values. Interestingly, most records had 'state', 'province', and geographical coordinates intact.
 
